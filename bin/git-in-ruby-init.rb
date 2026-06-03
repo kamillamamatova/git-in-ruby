@@ -48,3 +48,18 @@ def initialize_head
     file.puts "ref: refs/heads/master"
   end
 end
+
+# Creates the main .git-in-ruby directory
+Dir.mkdir GIT_IN_RUBY_DIR
+
+# Creates the objects folder structure
+build_objects_dir
+
+# Creates the refs folder structure
+build_refs_dir
+
+# Initializes the HEAD file
+initialize_head
+
+# Prints a success message to standard output
+%stdout.puts "git-in-ruby initialized in #{GIT_IN_RUBY_DIR}"
