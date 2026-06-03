@@ -25,3 +25,15 @@ def build_objects_dir
   # Creates .git-in-ruby/objects/pack
   Dir.mkdir "#{OBJECTS_DIR}/pack"
 end
+
+# Method that creates the refs directory structure
+def build_refs_dir
+  # Create .git-in-ruby/refs
+  Dir.mkdir REFS_DIR
+
+  # Creates .git-in-ruby/refs/heads
+  Dir.mkdir "#{REFS_DIR}/heads"
+
+  # Creates .git_in_ruby/refs/tags
+  Dir.mkdir "#{REFS_DIR}/tags"
+end
