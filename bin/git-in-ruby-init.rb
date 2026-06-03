@@ -37,3 +37,14 @@ def build_refs_dir
   # Creates .git_in_ruby/refs/tags
   Dir.mkdir "#{REFS_DIR}/tags"
 end
+
+# Method that creates the HEAD file
+def initialize_head
+  # Opens .git-in-ruby/HEAD for writing
+  # If it doesn't exist, ruby will create it
+  File.open("#{GIT_IN_RUBY_DIR}/HEAD", "w") do |file|
+    # Writes the default branch reference into HEAD
+    # This means HEAD points to refs/heads/master
+    file.puts "ref: refs/heads/master"
+  end
+end
