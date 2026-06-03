@@ -13,3 +13,15 @@ if Dir.exists? GIT_IN_RUBY_DIR
   $stderr.puts "Existing git-in-ruby project"
   exit 1
 end
+
+# Method that creates the objects directory structure
+def build_objects_dir
+  # Creates .git-in-ruby/objects
+  Dir.mkdir OBJECTS_DIR
+
+  # Creates .git-in-ruby/objects/info
+  Dir.mkdir "#{OBJECTS_DIR}/info"
+
+  # Creates .git-in-ruby/objects/pack
+  Dir.mkdir "#{OBJECTS_DIR}/pack"
+end
