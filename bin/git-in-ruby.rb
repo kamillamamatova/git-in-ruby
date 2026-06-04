@@ -11,7 +11,7 @@ if command.nil?
 end
 
 # Builds the full path to the command executable
-path_to_command = File.expand_path("git-in-ruby-#{command}", __dir__)
+path_to_command = File.join(__dir__, "git-in-ruby-#{command}.rb")
 
 # Checks whether the command file actually exists
 if !File.exist? path_to_command
