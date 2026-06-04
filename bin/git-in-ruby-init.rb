@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Defines the name of the main git-in-ruby directory
 GIT_IN_RUBY_DIR = ".git-in-ruby".freeze # .freeze prevents the string from being modified later
 
@@ -62,4 +64,4 @@ build_refs_dir
 initialize_head
 
 # Prints a success message to standard output
-%stdout.puts "git-in-ruby initialized in #{GIT_IN_RUBY_DIR}"
+$stdout.puts "git-in-ruby initialized in #{GIT_IN_RUBY_DIR}"
