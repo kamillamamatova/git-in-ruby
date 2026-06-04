@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Gets the first command line argument and stores the rest in args
 command, *args = ARGV
 
