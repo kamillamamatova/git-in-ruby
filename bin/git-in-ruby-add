@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# SHA1 hashing
+require "digest"
+# Compression
+require "zlib"
+# Creates directories recursively
+require "fileutils"
+
+# Paths used by the repository
+GIT_IN_RUBY_DIR = ".git-in-ruby".freeze
+OBJECTS_DIR = "#{GIT_IN_RUBY_DIR}/objects".freeze
+INDEX_PATH = "#{GIT_IN_RUBY_DIR}/index"
+
