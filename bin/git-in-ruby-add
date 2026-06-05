@@ -12,3 +12,8 @@ GIT_IN_RUBY_DIR = ".git-in-ruby".freeze
 OBJECTS_DIR = "#{GIT_IN_RUBY_DIR}/objects".freeze
 INDEX_PATH = "#{GIT_IN_RUBY_DIR}/index"
 
+# Makes sure I'm inside the repository
+if !Dir.exist? GIT_IN_RUBY_DIR
+    $stderr.puts "Not in git_in_ruby repository"
+    exit 1
+end
