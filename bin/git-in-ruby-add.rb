@@ -34,7 +34,7 @@ file_contents = File.read(path)
 sha = Digest::SHA1.hexdigest(file_contents)
 
 # Compresses the file contents before storing them
-blob = Zlib::Deflate.deflate
+blob = Zlib::Deflate.deflate(file_contents)
 
 # Creates git style object directory using first 2 chars of SHA
 object_dir = "#{OBJECTS_DIR}/#{sha[0..1]}"
