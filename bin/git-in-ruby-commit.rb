@@ -14,3 +14,9 @@ require "time"
 
 # Loads the custom GitInRuby::Object class
 require "git-in-ruby/object"
+
+# Path to the .git-in-ruby directory
+GIT-IN-RUBY_DIR = "#{Dir.pwd}/.git-in-ruby".freeze
+
+# Path to the staging index file
+INDEX_PATH = "#{GIT-IN-RUBY_DIR}/index"
