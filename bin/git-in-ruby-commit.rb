@@ -20,3 +20,10 @@ GIT-IN-RUBY_DIR = "#{Dir.pwd}/.git-in-ruby".freeze
 
 # Path to the staging index file
 INDEX_PATH = "#{GIT-IN-RUBY_DIR}/index"
+
+# Default commit message template shown to the user
+COMMIT_MESSAGE_TEMPLATE = <<-TXT
+# Title
+# 
+# Body
+TXT
