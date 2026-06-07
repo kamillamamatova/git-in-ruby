@@ -27,3 +27,10 @@ COMMIT_MESSAGE_TEMPLATE = <<-TXT
 # 
 # Body
 TXT
+
+# Reads the index file line by line
+# Returns an enumerator that can be looped through
+def index_files
+  File.open(INDEX_PATH).each_line
+end
+
