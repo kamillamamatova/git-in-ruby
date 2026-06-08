@@ -16,10 +16,10 @@ require "time"
 require "git-in-ruby/object"
 
 # Path to the .git-in-ruby directory
-GIT-IN-RUBY_DIR = "#{Dir.pwd}/.git-in-ruby".freeze
+GIT_IN_RUBY_DIR = "#{Dir.pwd}/.git-in-ruby".freeze
 
 # Path to the staging index file
-INDEX_PATH = "#{GIT-IN-RUBY_DIR}/index"
+INDEX_PATH = "#{GIT_IN_RUBY_DIR}/index"
 
 # Default commit message template shown to the user
 COMMIT_MESSAGE_TEMPLATE = <<-TXT
