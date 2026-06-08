@@ -69,7 +69,7 @@ def index_tree
         memo
       else
         # Creates the directory hash if needed
-        memo[s] || = {}
+        memo[s] ||= {}
 
         # Moves deeper into the tree
         memo[s]
