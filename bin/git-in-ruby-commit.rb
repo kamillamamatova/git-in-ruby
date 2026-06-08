@@ -34,3 +34,46 @@ def index_files
   File.open(INDEX_PATH).each_line
 end
 
+# Converts the flat index into a nested tree structure
+# EX:
+# Index:
+# abc122 README.md
+# idk456 src/main.rb
+# lol789 src/utils/helper.rb
+# Procedures:
+# {
+#     "README.md" => "abc122",
+#     "src" => {
+#         "main.rb" => "idk456",
+#         "utils" => {
+#             "helper.rb" => "lol789"
+#         }
+#     }
+# }
+def index_tree
+  # Starts w/ an empty hash
+  # Builds the tree structure as files are processed
+  index_files.each_with_object({}) do |line, tree|
+     # Splits each line into its components
+     sha, _, path = line.split
+
+     # Breaks the file path into directories
+     segments = path.split("/")
+
+     # Walks through each directory level and builds hashes
+     segements.reduce(obj) do [memo, s]
+      # If this is the final segment, stores the SHA as the file value
+      if s == segments.last
+        memo[segments.last] = sha
+
+        memo
+      else
+        # Creates the directory hash if needed
+        memo[s] || = {}
+
+        # Moves deeper into the tree
+        memo[s]
+      end
+    end
+  end
+end
