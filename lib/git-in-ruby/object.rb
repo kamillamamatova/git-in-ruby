@@ -4,12 +4,12 @@
 require "fileutils"
 
 # git-in-ruby namespace to avoid conflicts w/ Ruby's build in classes & modules
-module gitInRuby
+module GitInRuby
   # Stores thr absolute path to the .git-in-ruby directory
-  GIT-IN-RUBY_DIR = "#{Dir.pwd}/.git-in-ruby".freeze
+  GIT_IN_RUBY_DIR = "#{Dir.pwd}/.git-in-ruby".freeze
 
   # Stores the path to the objects directory inside .git-in-ruby
-  OBJECTS_DIR = "#{GIT-IN-RUBY_DIR}/objects".freeze
+  OBJECTS_DIR = "#{GIT_IN_RUBY_DIR}/objects".freeze
 
   # Represents a git style object stored in .git-in-ruby/objects
   class Object
