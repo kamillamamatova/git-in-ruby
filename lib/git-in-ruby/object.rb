@@ -4,7 +4,7 @@
 require "fileutils"
 
 # git-in-ruby namespace to avoid conflicts w/ Ruby's build in classes & modules
-module git-in-ruby
+module gitInRuby
   # Stores thr absolute path to the .git-in-ruby directory
   GIT-IN-RUBY_DIR = "#{Dir.pwd}/.git-in-ruby".freeze
 
