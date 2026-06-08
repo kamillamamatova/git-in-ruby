@@ -14,7 +14,7 @@ module GitInRuby
   # Represents a git style object stored in .git-in-ruby/objects
   class Object
     # Creates a new object & stores its SHA hash
-    def initialize(content)
+    def initialize(sha)
       @sha = sha
     end
 
