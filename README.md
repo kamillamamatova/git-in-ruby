@@ -11,3 +11,5 @@ I regret naming this git-in-ruby because I have to use that name so many times, 
 
 Apparently ruby doesn't let u have hyphens in module/class names, so module "git-in-ruby" wasn't good
 Oh it also needs to start w/ an upper case letter
+
+Building the tree is done in 2 passes. 1st index is converted into a hash structure representing the file tree. This structure is converted to tree objects on the filesystem. Both steps are done recursively.
