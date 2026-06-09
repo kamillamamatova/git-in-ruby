@@ -77,3 +77,9 @@ def index_tree
     end
   end
 end
+
+# 1. Exits w/ error code & message if there are no files to commit
+# 2. Creates all the necessary tree objects for the files in the index
+# 3. Creates a commit object pointing to the root tree object
+# 4. Updates the current branch to point to the commit
+# 5. Clears the index
